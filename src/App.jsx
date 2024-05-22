@@ -20,7 +20,6 @@ function App() {
   const [tabContent,setTabContent] = useState()
   const handleSelect=(selectedButton)=>{
     setTabContent(selectedButton)
-    console.log(selectedButton)
 }
   return (
     <div>
@@ -30,7 +29,7 @@ function App() {
        <section id='core-concepts'>
        
        <ul>
-        {CORE_CONCEPTS.map((item,inx)=><CoreConcept {...item}/>)
+        {CORE_CONCEPTS.map((item,inx)=><CoreConcept key ={item.title} {...item}/>)
       }
        </ul>
        </section>
